@@ -62,7 +62,7 @@
         "publicIPAddressName": "adPublicIP",
         "adAvailabilitySetName": "adAvailabiltySet",
         "adLBName": "HanuLabs-LB",
-        "location": "West US"
+        "location": "EAST US"
     },
     "resources": [
         {
@@ -194,7 +194,7 @@
             "type": "Microsoft.Compute/virtualMachines",
             "name": "[variables('adVMName')]",
             "apiVersion": "2017-03-30",
-            "location": "[parameters('Central US')]",
+            "location": "[parameters('location')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/networkInterfaces', variables('adNicName'))]",
                 "[resourceId('Microsoft.Compute/availabilitySets', variables('adAvailabilitySetName'))]",
